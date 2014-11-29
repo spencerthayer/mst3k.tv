@@ -30,12 +30,7 @@
 </head>
 <body class="blur">
     <div class="logo" id="logo">
-        <img
-            src="<?=$php_resize."favicon".".png"."&w=32&h=32&zc=0";?>"
-            alt="Click to reload the stream!"
-            title="Click to reload the stream!"
-            onclick="reload();"
-            />
+        <img src="<?=$php_resize."favicon".".png"."&w=32&h=32&zc=0";?>" />
     </div>
     <?/**/?><div id="darkness"></div><?/**/?>
     <?php if($is_dev): ?><div class="browsersize">BROWSER SIZE: <strong><span id="width">W</span></strong>x<strong><span id="height">H</span></strong></div><?php endif; ?>
@@ -64,12 +59,13 @@
     <?/**/?>
     <div class="right">
             <?/* CONTROLS */?>
-            <div class="btn-group">                  
-                <a class="btn" id="lights" title="Turn down your lights (where applicable)."><i class="icon-idea"></i></a>
-                <a class="btn" onclick="javascript:document.documentElement.webkitRequestFullScreen();" title="Fullscreen"><i class="icon-fullscreen"></i></a>
+            <div class="btn-group">              
+                <a class="btn" onclick="javascript:document.documentElement.webkitRequestFullScreen();" title="Fullscreen"><i class="icon-fullscreen"></i></a> 
+                <a class="btn" id="lights" title="Turn down your lights (where applicable)!"><i class="icon-idea"></i></a>
+                <a class="btn" id="reload" title="Reload Stream" onclick="reload();"><i class="icon-repeat-alt"></i></a>
+                <a class="btn" href="<?=$field_schedule_url;?>" target="_blank" title="Show Schedule"><i class="icon-calendar"></i></a>
                 <a class="btn" id="video-toggle" href="javascript:void(0);" rel="<?=$field_embed_url;?>" target="_blank" title="Popout Video"><i class="icon-video"></i></a>
                 <a class="btn" id="chat-toggle" href="javascript:void(0);" rel="<?=$field_chat_url;?>" target="_blank" title="Popout Chat"><i class="icon-comment"></i></a>
-                <a class="btn" href="<?=$field_schedule_url;?>" target="_blank" title="Show Schedule"><i class="icon-calendar"></i></a>
                 <a class="btn" href="<?=$field_stream_url;?>" target="_blank" title="Stream URL"><i class="icon-network"></i></a>
             </div>
             <div class="clearfix"></div>

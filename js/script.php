@@ -98,3 +98,29 @@ function reload() {
     $("#stream").attr("src", $("#stream").attr("src"));
 }
 /****/
+    <?/*
+    params.emoticonPath = "http://deep13.us/images/emoticons/";
+    params.emoticonList = ":)->smile.gif,;)->wink.gif,:D->awesome.gif,>:P->madppbt.gif,:P->tongue.gif,xp->ppbt.gif,>:(->angry.gif,:(->sad.gif,:$->blush.gif,:0->onoes.gif,8|->hmf.gif,XD->xd.gif,:la:->la.gif,D:->D8.gif,:3->meow.gif,;D->semicolond.png,n_n->shiffy.png,<3->heart.png,:love:->love.gif,:lemon:->lemon.gif,:facepalm:->facepalm.gif,:hmm:->hmm.gif,:L->colonl.gif,:|->stare.gif,B)->sunglasses.gif,:zzz:->zzz.png,:goat:->goat.gif,:gert:->goat2.gif,:molko:->molko.gif,:[->creeper.gif,:tj:->chinny.gif,:chinny:->chinchilla.gif,:bat:->bat.gif,:mario:->Emoticon_mario.png,:joel:->joelhodgson.gif,:mike:->mike.png,:tom:->tomservo.gif,:crow:->crow.gif,:gypsy:->gypsy.gif,:brainguy:->brainguy2.png,:nanite:->nanite.png,:hippo:->hippo.gif,:mrt:->mr-t.gif,:kitteh:->cat.gif,:tick:->tick.png,:ae:->ae1.png,:fuae:->fuae.png,:torgo:->torgo.jpg,:nosprings:->coily.png,:mrb:->mrb.png,:itstinks:->itstinks.png,:tor:->tor.png,:iceicebaby:->ice.png,:tearingmeapaht:->tearingmeapart.png,:tnetennba:->moss.png,:sillywalk:->sillywalk.gif,:cthulhu:->cthulu.png,:k9:->k9.png,:greenguy:->h2g2.png,:wutchoo:->arnold.png,:rowr:->rowr.png,:toonces:->toonces.png,:jeff:->jeffg.png,_|oo->forklift.png,:kali:->kali.png,:spittake:->spittake.png,:batwaah:->batman.png,:colonel:->chestbridge.png";
+    <script>
+        /**** /
+        $(window).load(function() {
+            var channelOffline = function() {
+                alert("Channel is offline");
+            }
+            var channelLive = function() {
+                //alert("Channel is live");
+                viewer.callMethod("play");
+            }
+            var channelFinished = function() {
+                //alert("Channel video finished.");
+            }
+            var viewer = UstreamEmbed("stream");
+            console.log(viewer);
+            viewer.callMethod("load", "channel", <?=$field_embed_value;?>);
+            viewer.addListener("finished", channelFinished);
+            viewer.addListener("live", channelLive);
+            viewer.addListener("offline", channelOffline);
+        });
+        /**** /
+    </script>
+    */?>

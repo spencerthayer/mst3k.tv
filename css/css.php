@@ -1,15 +1,8 @@
 <?php
   header("Content-type: text/css; charset: UTF-8");
   require_once("../database.php");
-  $white      = "#fff";
-  $black      = "#000000"/*020102*/;
-  $darkblue   = "#353B53";
-  $liteblue   = "#428bca";
 ?>
-/* Google Font No Longer In Use
 @import url("//fonts.googleapis.com/css?family=Lato:400,700");
-@import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,700");
-*/
 html {
   width: 100%;
   height: 100%;
@@ -20,25 +13,26 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: <?=$black;?>;
-  color: <?=$white;?>;
+  background-color: <?=$background;?>;
+  color: <?=$fontColor;?>;
   font-size: 12px;
   font-family: "Lato", sans-serif;
 }
-h1 { font-size: 180%; line-height: 120%; font-weight: 100; text-shadow: 0 1px 1px <?=$darkblue;?>; }
-h2 { font-size: 160%; line-height: 120%; font-weight: 900; text-shadow: 0 1px 1px <?=$darkblue;?>; }
-h3 { font-size: 140%; line-height: 120%; font-weight: 400; text-shadow: 0 1px 1px <?=$darkblue;?>; }
-h4 { font-size: 120%; line-height: 120%; text-shadow: 0 1px 1px <?=$darkblue;?>; }
-h5 { font-size: 100%; line-height: 120%; text-shadow: 0 1px 1px <?=$darkblue;?>; }
-h6 { font-size: 80%; line-height: 120%; text-shadow: 0 1px 1px <?=$darkblue;?>; }
-p { font-size: 100%; text-shadow: 0 1px 1px <?=$darkblue;?>; }
-p small { font-size: 80%; text-shadow: 0 1px 1px <?=$darkblue;?>; }
+h1 { font-size: 180%; line-height: 120%; font-weight: 100; text-shadow: 0 1px 1px <?=$linkAction;?>; }
+h2 { font-size: 160%; line-height: 120%; font-weight: 900; text-shadow: 0 1px 1px <?=$linkAction;?>; }
+h3 { font-size: 140%; line-height: 120%; font-weight: 400; text-shadow: 0 1px 1px <?=$linkAction;?>; }
+h4 { font-size: 120%; line-height: 120%; text-shadow: 0 1px 1px <?=$linkAction;?>; }
+h5 { font-size: 100%; line-height: 120%; text-shadow: 0 1px 1px <?=$linkAction;?>; }
+h6 { font-size: 80%; line-height: 120%; text-shadow: 0 1px 1px <?=$linkAction;?>; }
+p { font-size: 100%; text-shadow: 0 1px 1px <?=$linkAction;?>; }
+p small { font-size: 80%; text-shadow: 0 1px 1px <?=$linkAction;?>; }
 .nobr { white-space: nowrap; }
 a {
-  color: <?=$liteblue;?>;
+  color: <?=$linkDefault;?>;
   transition: opacity .2s;
 }
 a:hover {
+  color: <?=$linkAction;?>;
   text-decoration: none;
   opacity: .8;
 }
@@ -189,8 +183,8 @@ iframe {
   font-size: 10px;
   line-height: 10px;
   text-align: center;
-  color: <?=$white;?>;
-  background-color: <?=$black;?>;
+  color: <?=$fontColor;?>;
+  background-color: <?=$background;?>;
   z-index: 10000;
 }
 /* Credits */
@@ -236,7 +230,7 @@ border-radius: 0;
     border-radius: 4px;
 }
 a {
-    color: <?=$liteblue;?>;
+    color: <?=$linkDefault;?>;
     text-decoration: none;
 }
 a {
@@ -267,7 +261,7 @@ a {
     left: 0;
     z-index: 102;
 }
-.logo img { cursor:wait; }
+.logo img { /*cursor:wait;*/ }
 .ios {
   font-size: 28px;
   margin:16px 0;

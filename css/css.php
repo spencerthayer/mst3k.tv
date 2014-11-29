@@ -6,8 +6,10 @@
   $darkblue   = "#353B53";
   $liteblue   = "#428bca";
 ?>
+/* Google Font No Longer In Use
 @import url("//fonts.googleapis.com/css?family=Lato:400,700");
 @import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+*/
 html {
   width: 100%;
   height: 100%;
@@ -191,6 +193,7 @@ iframe {
   background-color: <?=$black;?>;
   z-index: 10000;
 }
+/* Credits */
 .madeby {
     z-index: 102;
 }
@@ -202,7 +205,7 @@ iframe {
   vertical-align: middle;
 }
 .clearfix { clear:both; }
-/* BUTTONS */
+/* Buttons */
 .btn-group>.btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
 border-radius: 0;
 }
@@ -239,21 +242,10 @@ a {
 a {
     background: 0 0;
 }
-/* Darkness */
+/* Lights */
 #lights {
     z-index:101;
 }
-/*
-#lightsoff {
-    position: relative;
-    z-index:101 !important;
-    border:0;
-    background:none;box-shadow:none;
-    color:<?=$white;?>;
-    text-shadow: 0 1px 1px <?=$darkblue;?>;
-    margin-right:2px;
-    }
-*/
 #darkness {
     position: absolute;
     left: 0; right: 0; top: 0; bottom: 0;
@@ -286,3 +278,15 @@ a {
   display: block !important;
   clear: both !important;
 }
+
+/* Poll Question */
+#OPP-poll-id-52c33f2ae4b01752c427ce65 {
+    width:100% !important;
+}
+#OPP-div-around-poll {
+    background: none !important;
+}
+#OPP-poll-question-text {
+    color: #FFFFFF !important;
+}
+#OPP-powered-by { display: none !important; }

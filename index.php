@@ -1,6 +1,5 @@
 <?php require_once("database.php"); ?>
-<?php //if ($iPod||$iPhone) { header("Location: ".$field_ios_stream); } ?>
-<?/** /?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><?/**/?>
+<!DOCTYPE html PUBLIC> 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <?/* META */?>
@@ -27,35 +26,7 @@
         <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
         <!--<script type="text/javascript" src="//raw.githubusercontent.com/ustream/embedapi/master/src/ustream-embedapi.js"></script>-->
         <script type="text/javascript" src="/js/ratio.js"></script>
-        <script type="text/javascript" src="/js/script.js.php"></script>
-    <?/*
-
-    params.emoticonPath = "http://deep13.us/images/emoticons/";
-    params.emoticonList = ":)->smile.gif,;)->wink.gif,:D->awesome.gif,>:P->madppbt.gif,:P->tongue.gif,xp->ppbt.gif,>:(->angry.gif,:(->sad.gif,:$->blush.gif,:0->onoes.gif,8|->hmf.gif,XD->xd.gif,:la:->la.gif,D:->D8.gif,:3->meow.gif,;D->semicolond.png,n_n->shiffy.png,<3->heart.png,:love:->love.gif,:lemon:->lemon.gif,:facepalm:->facepalm.gif,:hmm:->hmm.gif,:L->colonl.gif,:|->stare.gif,B)->sunglasses.gif,:zzz:->zzz.png,:goat:->goat.gif,:gert:->goat2.gif,:molko:->molko.gif,:[->creeper.gif,:tj:->chinny.gif,:chinny:->chinchilla.gif,:bat:->bat.gif,:mario:->Emoticon_mario.png,:joel:->joelhodgson.gif,:mike:->mike.png,:tom:->tomservo.gif,:crow:->crow.gif,:gypsy:->gypsy.gif,:brainguy:->brainguy2.png,:nanite:->nanite.png,:hippo:->hippo.gif,:mrt:->mr-t.gif,:kitteh:->cat.gif,:tick:->tick.png,:ae:->ae1.png,:fuae:->fuae.png,:torgo:->torgo.jpg,:nosprings:->coily.png,:mrb:->mrb.png,:itstinks:->itstinks.png,:tor:->tor.png,:iceicebaby:->ice.png,:tearingmeapaht:->tearingmeapart.png,:tnetennba:->moss.png,:sillywalk:->sillywalk.gif,:cthulhu:->cthulu.png,:k9:->k9.png,:greenguy:->h2g2.png,:wutchoo:->arnold.png,:rowr:->rowr.png,:toonces:->toonces.png,:jeff:->jeffg.png,_|oo->forklift.png,:kali:->kali.png,:spittake:->spittake.png,:batwaah:->batman.png,:colonel:->chestbridge.png";
-    
-    */?>
-    <script>
-        /**** /
-        $(window).load(function() {
-            var channelOffline = function() {
-                alert("Channel is offline");
-            }
-            var channelLive = function() {
-                //alert("Channel is live");
-                viewer.callMethod("play");
-            }
-            var channelFinished = function() {
-                //alert("Channel video finished.");
-            }
-            var viewer = UstreamEmbed("stream");
-            console.log(viewer);
-            viewer.callMethod("load", "channel", <?=$field_embed_value;?>);
-            viewer.addListener("finished", channelFinished);
-            viewer.addListener("live", channelLive);
-            viewer.addListener("offline", channelOffline);
-        });
-        /****/
-    </script>
+        <script type="text/javascript" src="/js/script.php"></script>
 </head>
 <body class="blur">
     <div class="logo" id="logo">
@@ -92,7 +63,7 @@
     </div>
     <?/**/?>
     <div class="right">
-        <?/* CONTROLS */?>
+            <?/* CONTROLS */?>
             <div class="btn-group">                  
                 <a class="btn" id="lights" title="Turn down your lights (where applicable)."><i class="icon-idea"></i></a>
                 <a class="btn" onclick="javascript:document.documentElement.webkitRequestFullScreen();" title="Fullscreen"><i class="icon-fullscreen"></i></a>
@@ -100,24 +71,15 @@
                 <a class="btn" id="chat-toggle" href="javascript:void(0);" rel="<?=$field_chat_url;?>" target="_blank" title="Popout Chat"><i class="icon-comment"></i></a>
                 <a class="btn" href="<?=$field_schedule_url;?>" target="_blank" title="Show Schedule"><i class="icon-calendar"></i></a>
                 <a class="btn" href="<?=$field_stream_url;?>" target="_blank" title="Stream URL"><i class="icon-network"></i></a>
-                
             </div>
             <div class="clearfix"></div>
-        <?/* 728x90 AD */?>
+            <?/* 728x90 AD */?>
             <div class="watchonvimeo">
                 <a href="<?=$vimeo_track;?>" target="_blank"><img src="<?=$php_resize."MST3KlongVimeo".".jpg"."&w=720&h=90&zc=100";?>" alt="The official home of MST3K is on Vimeo!"  class="img-responsive" /></a>
             </div>
-      <?/* CHAT */?>
+            <?/* CHAT */?>
             <iframe src="<?=$field_chat_url;?>" name="chat" class="chat" id="chat"></iframe>
-      <?/**/?>
-        <?/* 300x250 AD * /?>
-            <div class="vimeo">
-                <?php //require_once("vimeo-ad.php"); ?>
-                <a href="<?=$vimeo_track;?>" target="_blank">
-                    <img src="/img/MST3Kxw-300x250.jpg" alt="The official home of MST3K is on Vimeo!" style="border:none;" />
-              </a>
-            </div>
-        <?/**/?>
+            <?/**/?>
     </div>
     <?/**/?>
     <?/* CREDIT */?>

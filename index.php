@@ -1,5 +1,5 @@
 <?php require_once("database.php"); ?>
-<!DOCTYPE html PUBLIC> 
+<!DOCTYPE html PUBLIC>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <?/* META */?>
@@ -9,9 +9,9 @@
     <?/* SOCIAL SHARE */?>
         <meta property="og:site_name"content="<?=$head_title; ?>" />
         <meta property="og:image" content="<?=$URLpath;?>img/play-mst3k.png" />
-        <meta property="og:url" content="<?=$URLpath;?>" />    
+        <meta property="og:url" content="<?=$URLpath;?>" />
     <?/* MOBILE SETTINGS */?>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/> 
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
         <title><?=$head_title; ?></title>
         <link rel="apple-touch-icon" sizes="144x144" href="<?=$php_resize."favicon".".png"."&w=144&h=144&zc=0";?>"/>
@@ -26,11 +26,33 @@
         <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
         <!--<script type="text/javascript" src="//raw.githubusercontent.com/ustream/embedapi/master/src/ustream-embedapi.js"></script>-->
         <script type="text/javascript" src="/js/ratio.js"></script>
+        <!--script type="text/javascript" src="/js/menu.js"></script-->
         <script type="text/javascript" src="/js/script.php"></script>
 </head>
 <body class="blur">
     <div class="logo" id="logo">
-        <img src="<?=$php_resize."favicon".".png"."&w=32&h=32&zc=0";?>" />
+        <ul id="nav">
+            <li>
+                <a href="/" title="Home">
+                    <img src="<?=$php_resize."favicon".".png"."&w=32&h=32&zc=0";?>" />
+                </a>
+                <ul>
+                    <li><a href="/synth">Synth</a></li>
+                    <li><a href="/moviesign">Movie Sign</a></li>
+                    <li><a href="/avo">Just The Avocado</a></li>
+                    <li><a href="/fletch">Fletch</a></li>
+                    <li><a href="/thworldisyours">The World is Yours</a></li>
+                    <li><a href="/twinbee">Twin Bee</a></li>
+                    <li><a href="/holly">Holly</a></li>
+                    <li><a href="/phunq">Phunq</a></li>
+                    <li><a href="/snappu">Snappu</a></li>
+                    <li><a href="/neysdower">Neysdower</a></li>
+                    <li><a href="/canabian">Canabian</a></li>
+                    <li><a href="/winter">Winter</a></li>
+                    <li><a href="/jollyaustin">Jolly Austin</a></li>
+                </ul>
+            </li>
+        </ul>
     </div>
     <?/**/?><div id="darkness"></div><?/**/?>
     <?php if($is_dev): ?><div class="browsersize">BROWSER SIZE: <strong><span id="width">W</span></strong>x<strong><span id="height">H</span></strong></div><?php endif; ?>
@@ -52,21 +74,28 @@
               class="stream"
               name="stream"
               id="stream"
+              style="border: 0 none transparent;"
+              allowfullscreen
+              webkitallowfullscreen
             ></iframe>
+        <?/** /?>
+            <iframe width="100%" height="100%" src="https://www.youtube.com/v/3DWLrPWC3Gs&autoplay=1" frameborder="0" class="stream" name="stream" id="stream" allowfullscreen></iframe>
         <?/**/?>
         </div>
     </div>
     <?/**/?>
     <div class="right">
             <?/* CONTROLS */?>
-            <div class="btn-group">              
-                <a class="btn" onclick="javascript:document.documentElement.webkitRequestFullScreen();" title="Fullscreen"><i class="icon-fullscreen"></i></a> 
+            <div class="btn-group">
+                <a class="btn" onclick="javascript:document.documentElement.webkitRequestFullScreen();" title="Fullscreen"><i class="icon-fullscreen"></i></a>
                 <a class="btn" id="lights" title="Turn down your lights (where applicable)!"><i class="icon-idea"></i></a>
                 <a class="btn" id="reload" title="Reload Stream" onclick="reload();"><i class="icon-repeat-alt"></i></a>
-                <a class="btn" href="<?=$field_schedule_url;?>" target="_blank" title="Show Schedule"><i class="icon-calendar"></i></a>
                 <a class="btn" id="video-toggle" href="javascript:void(0);" rel="<?=$field_embed_url;?>" target="_blank" title="Popout Video"><i class="icon-video"></i></a>
                 <a class="btn" id="chat-toggle" href="javascript:void(0);" rel="<?=$field_chat_url;?>" target="_blank" title="Popout Chat"><i class="icon-comment"></i></a>
+                <? if ($embedVal == NULL || $embedVal == "?me") : ?>
+                <a class="btn" href="<?=$field_schedule_url;?>" target="_blank" title="Show Schedule"><i class="icon-calendar"></i></a>
                 <a class="btn" href="<?=$field_stream_url;?>" target="_blank" title="Stream URL"><i class="icon-network"></i></a>
+                <? endif; ?>
             </div>
             <div class="clearfix"></div>
             <?/* 728x90 AD */?>

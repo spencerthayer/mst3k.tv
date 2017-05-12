@@ -6,6 +6,8 @@
         $paths = explode("/", $URLpath);
         $channel = $paths[3];
             global $channel;
+    /* Error Reporting */
+        if(!$is_dev){error_reporting(0);}
     /* List CSV Database */
         $csvFile = "https://docs.google.com/spreadsheets/d/1MS3prMvRYmXdtddS-RAt2g6zv6X_JJv3Zhgb2fsPA4c/pub?output=csv";
         global $csvFile;
@@ -81,6 +83,7 @@
         }
         /* Nicknames */
         include("manlyname.php");
-        $nickname = $manlyname;
-        $field_chat_url = "https://kiwiirc.com/client/".$fieldServer."/?nick=".$nickname."?&theme=cli#".$fieldChat;
+            $nickname = $manlyname;
+        /* Chat */
+        $field_chat_url = "https://kiwiirc.com/client/".$fieldServer."/?nick=".$nickname."&theme=cli#".$fieldChat;
 ?>

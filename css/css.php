@@ -85,7 +85,7 @@ img {
     .right { width: 500px; }
     .left { margin-right: 500px; }
     .chat {
-      <?$n0=(32+63)."px";?>
+      <?$n0=(0+63)."px";?>
       height: -moz-calc(100% - <?=$n0;?>);
       height: -webkit-calc(100% - <?=$n0;?>);
       height: calc(100% - <?=$n0;?>);
@@ -95,7 +95,7 @@ img {
     .right { width: 500px; }
     .left { margin-right: 500px; }
     .chat {
-      <?$n1=(32+63)."px";?>
+      <?$n1=(0+63)."px";?>
       height: -moz-calc(100% - <?=$n1;?>);
       height: -webkit-calc(100% - <?=$n1;?>);
       height: calc(100% - <?=$n1;?>);
@@ -105,7 +105,7 @@ img {
     .right { width: 400px; }
     .left { margin-right: 400px; }
     .chat {
-      <?$n2=(32+50)."px";?>
+      <?$n2=(0+50)."px";?>
       height: -moz-calc(100% - <?=$n2;?>);
       height: -webkit-calc(100% - <?=$n2;?>);
       height: calc(100% - <?=$n2;?>);
@@ -115,7 +115,7 @@ img {
     .right { width: 300px; }
     .left { margin-right: 300px; }
     .chat {
-      <?$n3=(32+38)."px";?>
+      <?$n3=(0+38)."px";?>
       height: -moz-calc(100% - <?=$n3;?>);
       height: -webkit-calc(100% - <?=$n3;?>);
       height: calc(100% - <?=$n3;?>);

@@ -16,7 +16,7 @@
     <?/* MOBILE SETTINGS */?>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-        <title><?=$title; ?></title>
+        <title>MST3K.tv Deep Hurting 24/7</title>
         <link rel="apple-touch-icon" sizes="144x144" href="<?=$php_resize."favicon".".png"."&w=144&h=144&zc=0";?>"/>
         <link rel="apple-touch-icon" sizes="114x114" href="<?=$php_resize."favicon".".png"."&w=114&h=114&zc=0";?>"/>
         <link rel="apple-touch-icon" sizes="72x72" href="<?=$php_resize."favicon".".png"."&w=72&h=72&zc=0";?>"/>
@@ -142,7 +142,7 @@
         </div>
     <?/**/?>
     <?/* GOOGLE */?>
-        <?php if($is_me){ }elseif(!$is_dev){include "googleanalytics.php";} ?>
+        <?php if(!$is_dev){include "googleanalytics.php";} ?>
     <?/**/?>
 </body>
 </html>

@@ -1,5 +1,4 @@
 <?php
-    // error_reporting(0);
     define("ROOT",getcwd());
     $rootPath = $_SERVER["DOCUMENT_ROOT"];
     $dirpath = dirname(dirname(__FILE__));

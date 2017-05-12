@@ -13,13 +13,14 @@
         global $csvFile;
         $file_handle = fopen($csvFile, "r");
         global $file_handle;
+        $i = 0;
     /* Use CSV Database */
-        $file_handle = fopen($csvFile, "r");
-        $i = 1;
         while (!feof($file_handle) ) {
             $i++;
             $line_of_text = fgetcsv($file_handle, 1024);
-            // $nickVal = "";
+            // if ($line_of_text[1]=="yes") {
+            //     echo "<li><a href=\"/".$line_of_text[2]."\">".$line_of_text[3]."</a></li>";
+            // }
             if ($channel == NULL) {
                 if ($line_of_text[0]=="yes") {
                     $isDefault =    $line_of_text[0];

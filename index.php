@@ -44,37 +44,18 @@
                     <img src="<?=$php_resize."favicon".".png"."&w=32&h=32&zc=0";?>" />
                 </a>
                 <ul>
-                    <div class="buildOwn" style="background:#000;"><!-- http://jsfiddle.net/4M3q3/194/ -->
-                      <h4>Build Your Own Stream</h4>
-                      <div class="group" style="width:400px;">
-                          <select id="buildOne" class="select">
-                              <option value="u" selected>Ustream</option>
-                              <option value="y">YouTube</option>
-                              <!-- <option value="l">Livestream</option> -->
-                              <option value="t">Twitch</option>
-                          </select>
-                          <input id="buildTwo" type="text" placeholder="Stream ID #">
-                      <!-- </div>
-                      <div class="group"> -->
-                          <span class="addon">#</span>
-                          <input id="buildThree" type="text" placeholder="Channel">
-                          <a id="openStream" class="btn" style="color:#3388FF;">Open Stream</a>
-                      </div>
-                    </div>
-                    <li><a href="/synth">Synth</a></li>
-                    <li><a href="/moviesign">Movie Sign</a></li>
-                    <li><a href="/avo">Just The Avocado</a></li>
-                    <li><a href="/fletch">Fletch</a></li>
-                    <li><a href="/thworldisyours">The World is Yours</a></li>
-                    <li><a href="/twinbee">Twin Bee</a></li>
-                    <li><a href="/holly">Holly</a></li>
-                    <li><a href="/phunq">Phunq</a></li>
-                    <li><a href="/snappu">Snappu</a></li>
-                    <li><a href="/neysdower">Neysdower</a></li>
-                    <li><a href="/canabian">Canabian</a></li>
-                    <li><a href="/winter">Winter</a></li>
-                    <li><a href="/jollyaustin">Jolly Austin</a></li>
-                    <li><a href="/jp">JP Hammer</a></li>
+                <?php
+                    $csvFile = "https://docs.google.com/spreadsheets/d/1MS3prMvRYmXdtddS-RAt2g6zv6X_JJv3Zhgb2fsPA4c/pub?output=csv";
+                    $file_handle = fopen($csvFile, "r");
+                    $i = 0;
+                    while (!feof($file_handle) ) {
+                        $i++;
+                        $lot = fgetcsv($file_handle, 1024);
+                        if ($lot[1]=="yes") {
+                            echo "<li><a href=\"/".$lot[2]."\">".$lot[3]."</a></li>";
+                        }
+                    }
+                ?>
                 </ul>
             </li>
         </ul>

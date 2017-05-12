@@ -34,7 +34,9 @@
                         global $fieldType;
                     $fieldChat = $line_of_text[6];
                         global $fieldChat;
-                    $fieldSchedule = $line_of_text[7];
+                    $fieldServer = $line_of_text[7];
+                        global $fieldServer;
+                    $fieldSchedule = $line_of_text[8];
                         global $fieldSchedule;
                 }
             }
@@ -53,7 +55,9 @@
                     global $fieldType;
                 $fieldChat = $line_of_text[6];
                     global $fieldChat;
-                $fieldSchedule = $line_of_text[7];
+                $fieldServer = $line_of_text[7];
+                    global $fieldServer;
+                $fieldSchedule = $line_of_text[8];
                     global $fieldSchedule;
                 }
         }
@@ -75,5 +79,8 @@
                 $embed_url = "https://player.twitch.tv/?channel=".$fieldStream."&data-paused=false&muted=false";
                 break;
         }
-       $field_chat_url = "https://kiwiirc.com/client/irc.rizon.io/?nick=MST3Ktv?&theme=cli#".$fieldChat;
+        /* Nicknames */
+        include("manlyname.php");
+        $nickname = $manlyname;
+        $field_chat_url = "https://kiwiirc.com/client/".$fieldServer."/?nick=".$nickname."?&theme=cli#".$fieldChat;
 ?>

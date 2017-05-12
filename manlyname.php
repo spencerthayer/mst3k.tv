@@ -1322,5 +1322,5 @@ shuffle($suffix);
 shuffle($middle);
 shuffle($title);
 for ($i = 0; $i <= 0; $i++) {
-    print $title[$i].$first[$i]."_".$middle[$i].$prefix[$i].$suffix[$i];
+    $manlyname = $title[$i].$first[$i]."_".$middle[$i].$prefix[$i].$suffix[$i];
 }

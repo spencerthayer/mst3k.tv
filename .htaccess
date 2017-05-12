@@ -22,24 +22,13 @@ RewriteRule .* index.php [L]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php
+# REWRITE SPACES AND +
+RewriteRule ^([^\ ]*)\ (.*)$ $1-$2 [E=rspace:yes,N]
+RewriteCond %{ENV:rspace} yes
+RewriteRule (.*) http://%{HTTP_HOST}$1 [R=301,L]
 ## REDIRECTS ##
 Redirect /big /bigmclargehuge
-Redirect /anal https://www.google.com/analytics/web/?hl=en#realtime/rt-overview/a27384119w68093412p70096409/
-## CHANNELS ##
-Redirect /synth /16843506/synth
-Redirect /moviesign /8564915/d13_moviesign
-Redirect /avo /16905669/d13_avo
-Redirect /fletch /16861251/d13_fletch
-Redirect /thworldisyours /17076803/d13_thw
-Redirect /twinbee /12925217/d13_twin
-Redirect /holly /17057523/d13_holly
-Redirect /phunq /16856394/d13_phunq
-Redirect /snappu /16867411/d13_snappu
-Redirect /neysdower /16778470/d13_neys
-Redirect /canabian /17170595/d13_canabian
-Redirect /winter /16707927/d13_winter
-Redirect /jollyaustin /16875790/d13_jolly
-#Redirect /YYYY /XXXX/d13_
+# Redirect /anal https://www.google.com/analytics/web/?hl=en#realtime/rt-overview/a27384119w68093412p70096409/
 #Block Bad Bots
 RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Bot\ mailto:craftbot@yahoo.com [OR]
@@ -118,3 +107,4 @@ RewriteCond %{HTTP_USER_AGENT} ^WWWOFFLE [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Zeus
 RewriteRule ^.* - [F,L]
+## REDIRECTS ##

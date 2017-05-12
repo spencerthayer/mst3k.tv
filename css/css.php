@@ -1,6 +1,6 @@
 <?php
-  header("Content-type: text/css; charset: UTF-8");
   require_once("../database.php");
+  header("Content-type: text/css; charset: UTF-8");
 ?>
 @import url("//fonts.googleapis.com/css?family=Lato:400,700");
 html {
@@ -266,7 +266,7 @@ a {
   font-size: 28px;
   margin:16px 0;
   display: block !important;
-  clear: both !important;  
+  clear: both !important;
 }
 .clear {
   display: block !important;
@@ -281,6 +281,44 @@ a {
     background: none !important;
 }
 #OPP-poll-question-text {
-    color: #FFFFFF !important;
+    color: <?=$fontColor;?> !important;
 }
 #OPP-powered-by { display: none !important; }
+
+/*--- DROPDOWN ---*/
+li {
+    display: list-item;
+    list-style: none;
+}
+#nav ul {
+    background: none;
+    list-style: none;
+    position: absolute;
+    left: -9999px; /* hide */
+}
+#nav ul li {
+    list-style: none;
+    margin: 14px 0 0 24px;
+    float:none;
+}
+#nav ul a {
+    color: <?=$fontColor;?>;
+    white-space: nowrap;
+    background: <?=$background;?>;
+    padding: 4px 8px;
+    font-size: 14px;
+}
+#nav li:hover ul {
+    left: -25px;
+}
+#nav li:hover a {
+    /*background: transparent;*/
+    /*text-decoration: none;*/
+}
+#nav li:hover ul a {
+    /*text-decoration: none;*/
+}
+#nav li:hover ul li a:hover {
+    background: <?=$linkDefault;?>;
+    /*background: transparent;*/
+}

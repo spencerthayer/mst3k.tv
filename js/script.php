@@ -1,6 +1,6 @@
 <?php
     header("Content-Type: application/x-javascript");
-    require_once("../database.php");
+    // require_once("../database.php");
 ?>
 $(document).ready(function() {
     /**VIEWPORT DATA**/
@@ -58,13 +58,13 @@ $(document).ready(function() {
             );
         return false;
     });
-    var watchVideo = setInterval(function() {
-        if (videoWin.closed) {
-            clearTimeout(watchChat);
-            $("#video").show(500)
-        }
-        return false;
-    }, 250);
+    // var watchVideo = setInterval(function() {
+    //     if (videoWin.closed) {
+    //         clearTimeout(watchChat);
+    //         $("#video").show(500)
+    //     }
+    //     return false;
+    // }, 250);
     /****/
     /**CHAT CONTROLS**/
     var chatWin;
@@ -84,43 +84,41 @@ $(document).ready(function() {
             );
         return false;
     });
-    var watchChat = setInterval(function() {
-        if (chatWin.closed) {
-            clearTimeout(watchChat);
-            $("#chat").show(500)
-        }
-        return false;
-    }, 250);
+    // var watchChat = setInterval(function() {
+    //     if (chatWin.closed) {
+    //         clearTimeout(watchChat);
+    //         $("#chat").show(500)
+    //     }
+    //     return false;
+    // }, 250);
     /****/
 });
 /**RELOAD STREAM CONTROL**/
 function reload() {
     $("#stream").attr("src", $("#stream").attr("src"));
 }
+//**BUILD YOUR OWN STREAM**/
+$(window).on("load", function() {
+  $("#openStream").click(function() {
+      var baseURL = "/",
+          divideURL = "/",
+          openStream1 = $("#buildOne").val(),
+          openStream2 = $("#buildTwo").val(),
+          openStream3 = $("#buildThree").val();
+      var newWindow = window.open(baseURL + openStream1 + divideURL + openStream2 + divideURL + openStream3, "_self");
+      newWindow.focus();
+  });
+});
+
+
 /****/
     <?/*
     params.emoticonPath = "http://deep13.us/images/emoticons/";
     params.emoticonList = ":)->smile.gif,;)->wink.gif,:D->awesome.gif,>:P->madppbt.gif,:P->tongue.gif,xp->ppbt.gif,>:(->angry.gif,:(->sad.gif,:$->blush.gif,:0->onoes.gif,8|->hmf.gif,XD->xd.gif,:la:->la.gif,D:->D8.gif,:3->meow.gif,;D->semicolond.png,n_n->shiffy.png,<3->heart.png,:love:->love.gif,:lemon:->lemon.gif,:facepalm:->facepalm.gif,:hmm:->hmm.gif,:L->colonl.gif,:|->stare.gif,B)->sunglasses.gif,:zzz:->zzz.png,:goat:->goat.gif,:gert:->goat2.gif,:molko:->molko.gif,:[->creeper.gif,:tj:->chinny.gif,:chinny:->chinchilla.gif,:bat:->bat.gif,:mario:->Emoticon_mario.png,:joel:->joelhodgson.gif,:mike:->mike.png,:tom:->tomservo.gif,:crow:->crow.gif,:gypsy:->gypsy.gif,:brainguy:->brainguy2.png,:nanite:->nanite.png,:hippo:->hippo.gif,:mrt:->mr-t.gif,:kitteh:->cat.gif,:tick:->tick.png,:ae:->ae1.png,:fuae:->fuae.png,:torgo:->torgo.jpg,:nosprings:->coily.png,:mrb:->mrb.png,:itstinks:->itstinks.png,:tor:->tor.png,:iceicebaby:->ice.png,:tearingmeapaht:->tearingmeapart.png,:tnetennba:->moss.png,:sillywalk:->sillywalk.gif,:cthulhu:->cthulu.png,:k9:->k9.png,:greenguy:->h2g2.png,:wutchoo:->arnold.png,:rowr:->rowr.png,:toonces:->toonces.png,:jeff:->jeffg.png,_|oo->forklift.png,:kali:->kali.png,:spittake:->spittake.png,:batwaah:->batman.png,:colonel:->chestbridge.png";
-    <script>
-        /**** /
-        $(window).load(function() {
-            var channelOffline = function() {
-                alert("Channel is offline");
-            }
-            var channelLive = function() {
-                //alert("Channel is live");
-                viewer.callMethod("play");
-            }
-            var channelFinished = function() {
-                //alert("Channel video finished.");
-            }
-            var viewer = UstreamEmbed("stream");
-            console.log(viewer);
-            viewer.callMethod("load", "channel", <?=$field_embed_value;?>);
-            viewer.addListener("finished", channelFinished);
-            viewer.addListener("live", channelLive);
-            viewer.addListener("offline", channelOffline);
-        });
+
+    params.emoticonPath = "http://syntheaux.dynu.com:50161/ircsynth/emoticons/";
+    params.emoticonList = ":)->smile.gif,;)->wink.gif,:D->awesome.gif,>:P->madppbt.gif,:P->tongue.gif,xp->ppbt.gif,>:(->angry.gif,:(->sad.gif,:$->blush.gif,:0->onoes.gif,8|->hmf.gif,XD->xd.gif,:la:->la.gif,D:->D8.gif,:3->meow.gif,;D->semicolond.png,n_n->shiffy.png,<3->heart.png,:love:->love.gif,:lemon:->lemon.gif,:facepalm:->facepalm.gif,:hmm:->hmm.gif,:L->colonl.gif,:|->stare.gif,B)->sunglasses.gif,:zzz:->zzz.png,:goat:->goat.gif,:gert:->goat2.gif,:molko:->molko.gif,:[->creeper.gif,:tj:->chinny.gif,:chinny:->chinchilla.gif,:bat:->bat.gif,:heyguys:->heyguys.png,:mario:->Emoticon_mario.png,:joel:->joelhodgson.gif,:mike:->mike.png,:tom:->tomservo.gif,:crow:->crow.gif,:gypsy:->gypsy.gif,:brainguy:->brainguy2.png,:nanite:->nanite.png,:hippo:->hippo.gif,:mrt:->mr-t.gif,:kitteh:->cat.gif,:tick:->tick.png,:ae:->ae1.png,:fuae:->fuae.png,:torgo:->torgo.png,:nosprings:->coily.png,:coily2:->coily2.png,:mrb:->mrb.png,:itstinks:->itstinks.png,:tor:->tor.png,:iceicebaby:->ice.png,:tearingmeapaht:->tearingmeapart.png,:tnetennba:->moss.png,:sillywalk:->sillywalk.gif,:cthulhu:->cthulu.png,:k9:->k9.png,:greenguy:->h2g2.png,:wutchoo:->arnold.png,:rowr:->rowr.png,:toonces:->toonces.png,:jeff:->jeffg.png,_|oo->forklift.png,:kali:->kali.png,:batwaah:->batman.png,:colonel:->chestbridge.png,:trap:->ackbar25.png,:onlyhope:->leia25.png,xwing->xwing25.png,:thumbdown:->vaderhand.png,:falcon:->falcon25.png,:thumbup:->handup.png,:corgi:->corgi.png,:aliens:->aliens.png,:na:->sodium.png";
+
         /**** /
     </script>
     */?>

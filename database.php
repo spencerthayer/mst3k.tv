@@ -23,7 +23,7 @@
     $hashtags = "MST3K,mystery science theater 3000,movie";
     $fontColor      = "#fff";
     $background     = "#000";
-    $linkDefault    = "#3388FF";
-    $linkAction     = "#3769af";
+    $linkDefault    = "#2196F3";
+    $linkAction     = "#1976d2";
     $vimeo_track ="https://vimeo.com/ondemand/mst3k?utm_source=mst3ktv_link&utm_medium=affiliate&utm_campaign=mst3ktv";
 ?>

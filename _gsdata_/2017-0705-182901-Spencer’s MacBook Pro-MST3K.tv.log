@@ -1,0 +1,7 @@
+2017-07-05 18:29:04: -- Analysis Started by On File Change Incremental
+2017-07-05 18:29:04: Changes: 1, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 56
+2017-07-05 18:29:04: Left to Right: Copy File: 1 
+2017-07-05 18:29:05: == Sync Started by On File Change Incremental
+2017-07-05 18:29:06: Copy Over '/www/MST3K/mst3k.tv/index.php' -> 'sftp://carroll.dreamhost.com/home/mst3k/dev/mst3k.tv/index.php'
+2017-07-05 18:29:07: == Sync Complete. Time: 00:00:02, Speed: 7.7 KB/s, OK: 1, Errors: 0
+2017-07-05 18:29:07: 

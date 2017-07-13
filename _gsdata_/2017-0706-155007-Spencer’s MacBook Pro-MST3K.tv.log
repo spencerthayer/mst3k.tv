@@ -1,0 +1,8 @@
+2017-07-06 15:50:10: -- Analysis Started by On File Change Incremental
+2017-07-06 15:50:10: Delete abandoned lock file at /www/MST3K/mst3k.tv
+2017-07-06 15:50:11: Changes: 1, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 63
+2017-07-06 15:50:11: Left to Right: Copy File: 1 
+2017-07-06 15:50:11: == Sync Started by On File Change Incremental
+2017-07-06 15:50:12: Copy Over '/www/MST3K/mst3k.tv/index.php' -> 'sftp://carroll.dreamhost.com/home/mst3k/dev/mst3k.tv/index.php'
+2017-07-06 15:50:13: == Sync Complete. Time: 00:00:02, Speed: 8.5 KB/s, OK: 1, Errors: 0
+2017-07-06 15:50:13: 

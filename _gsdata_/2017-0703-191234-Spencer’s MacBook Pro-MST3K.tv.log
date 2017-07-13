@@ -1,0 +1,9 @@
+2017-07-03 19:12:35: -- Analysis Started by User Command
+2017-07-03 19:12:38: Changes: 1, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 55
+2017-07-03 19:12:38: Left to Right: Copy File: 1 
+2017-07-03 19:12:38: -- Analysis Complete. Time 00:00:04, Speed: 13 files/s
+2017-07-03 19:12:38: 
+2017-07-03 19:12:42: == Sync Started by User Command
+2017-07-03 19:12:44: Copy Over '/www/MST3K/mst3k.tv/functions.php' -> 'sftp://carroll.dreamhost.com/home/mst3k/dev/mst3k.tv/functions.php'
+2017-07-03 19:12:45: == Sync Complete. Time: 00:00:05, Speed: 1.4 KB/s, OK: 1, Errors: 0
+2017-07-03 19:12:45: 

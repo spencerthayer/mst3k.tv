@@ -79,12 +79,27 @@
                 break;
             case "Twitch":
                 $stream_url = "https://twitch.tv/".$fieldStream;
-                $embed_url = "https://player.twitch.tv/?channel=".$fieldStream."&data-paused=false&muted=false";
+                // $embed_url = "https://player.twitch.tv/?channel=".$fieldStream."&data-paused=false&muted=false";
+                $embed_url ="https://player.twitch.tv/?volume=1&!muted&data-paused=false&channel=".$fieldStream;
                 break;
         }
         /* Nicknames */
         include("manlyname.php");
-            $nickname = $manlyname;
+        $nickname = $manlyname;
         /* Chat */
-        $field_chat_url = "https://kiwiirc.com/client/".$fieldServer."/?nick=".$nickname."&theme=cli#".$fieldChat;
+        // $field_chat_url = "https://kiwiirc.com/client/".$fieldServer."/?nick=".$nickname."#".$fieldChat;
+        $field_chat_url = "http://"."67.205.180.41"."/".$fieldServer."/".$fieldChat."/"."?nick=".$nickname;
+
+        function menu() {
+            $csvFile = "https://docs.google.com/spreadsheets/d/1MS3prMvRYmXdtddS-RAt2g6zv6X_JJv3Zhgb2fsPA4c/pub?output=csv";
+                    $file_handle = fopen($csvFile, "r");
+                    $i = 0;
+                    while (!feof($file_handle) ) {
+                        $i++;
+                        $lot = fgetcsv($file_handle, 1024);
+                        if ($lot[1]=="yes") {
+                            echo "<li><a href=\"/".$lot[2]."\">".$lot[3]."</a></li>";
+                        }
+                    }
+        }
 ?>

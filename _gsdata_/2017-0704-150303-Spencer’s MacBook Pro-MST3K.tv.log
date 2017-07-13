@@ -1,0 +1,9 @@
+2017-07-04 15:03:15: Recovered the connection, continuing operations
+2017-07-04 15:03:18: -- Analysis Started by On File Change Incremental
+2017-07-04 15:03:19: Changes: 1, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 55
+2017-07-04 15:03:19: Left to Right: Copy File: 1 
+2017-07-04 15:03:19: == Sync Started by On File Change Incremental
+2017-07-04 15:03:20: /www/MST3K/mst3k.tv/js/script.php: Source file has changed between Analyze and Sync from '[file] size=7412 accu-time=2017-07-04 15:03:14 attr=644' to 'size=7452 time=2017-07-04 15:03:19', noted in source file state
+2017-07-04 15:03:20: Copy Over '/www/MST3K/mst3k.tv/js/script.php' -> 'sftp://carroll.dreamhost.com/home/mst3k/dev/mst3k.tv/js/script.php'
+2017-07-04 15:03:21: == Sync Complete. Time: 00:00:02, Speed: 8.8 KB/s, OK: 1, Errors: 0
+2017-07-04 15:03:21: 

@@ -1,0 +1,8 @@
+2017-07-04 15:31:44: -- Analysis Started by On File Change Incremental
+2017-07-04 15:31:45: Changes: 2, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 56
+2017-07-04 15:31:45: Left to Right: Copy File: 1 Delete File: 1 
+2017-07-04 15:31:45: == Sync Started by On File Change Incremental
+2017-07-04 15:31:45: Delete File 'sftp://carroll.dreamhost.com/home/mst3k/dev/mst3k.tv/js/script.php'
+2017-07-04 15:31:46: Copy New '/www/MST3K/mst3k.tv/js/script.js' -> 'sftp://carroll.dreamhost.com/home/mst3k/dev/mst3k.tv/js/script.js'
+2017-07-04 15:31:47: == Sync Complete. Time: 00:00:02, Speed: 5.9 KB/s, OK: 2, Errors: 0
+2017-07-04 15:31:47: 

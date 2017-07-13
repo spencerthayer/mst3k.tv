@@ -1,0 +1,9 @@
+2017-07-07 01:23:59: -- Analysis Started by User Command
+2017-07-07 01:24:01: Changes: 1, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 63
+2017-07-07 01:24:01: Left to Right: Copy File: 1 
+2017-07-07 01:24:01: -- Analysis Complete. Time 00:00:04, Speed: 15 files/s
+2017-07-07 01:24:01: 
+2017-07-07 01:24:16: == Sync Started by User Command
+2017-07-07 01:24:18: Copy Over '/www/MST3K/mst3k.tv/js/script.js' -> 'sftp://carroll.dreamhost.com/home/mst3k/dev/mst3k.tv/js/script.js'
+2017-07-07 01:24:19: == Sync Complete. Time: 00:00:04, Speed: 3.1 KB/s, OK: 1, Errors: 0
+2017-07-07 01:24:19: 

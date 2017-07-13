@@ -1,0 +1,7 @@
+2017-07-06 16:03:04: -- Analysis Started by On File Change Incremental
+2017-07-06 16:03:05: Changes: 1, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 63
+2017-07-06 16:03:05: Left to Right: Delete File: 1 
+2017-07-06 16:03:05: == Sync Started by On File Change Incremental
+2017-07-06 16:03:05: Delete File 'sftp://carroll.dreamhost.com/home/mst3k/dev/mst3k.tv/js/jquery.zoomer.js'
+2017-07-06 16:03:06: == Sync Complete. Time: 00:00:01, Speed: 0.0/s, OK: 1, Errors: 0
+2017-07-06 16:03:06: 

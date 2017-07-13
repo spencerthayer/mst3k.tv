@@ -1,0 +1,7 @@
+2017-07-05 22:37:45: -- Analysis Started by On File Change Incremental
+2017-07-05 22:37:45: Changes: 1, Conflicts: 0, CopyTime: 0, FixState: 0, Errors: 0, All: 57
+2017-07-05 22:37:45: Left to Right: Copy File: 1 
+2017-07-05 22:37:45: == Sync Started by On File Change Incremental
+2017-07-05 22:37:46: Copy New '/www/MST3K/mst3k.tv/js/jquery.zoomer.js' -> 'sftp://carroll.dreamhost.com/home/mst3k/dev/mst3k.tv/js/jquery.zoomer.js'
+2017-07-05 22:37:46: == Sync Complete. Time: 00:00:01, Speed: 16.4 KB/s, OK: 1, Errors: 0
+2017-07-05 22:37:47: 

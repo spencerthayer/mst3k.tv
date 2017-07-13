@@ -109,3 +109,4 @@ RewriteCond %{HTTP_USER_AGENT} ^Zeus
 RewriteRule ^.* - [F,L]
 ## REDIRECTS ##
 Redirect /thelist https://docs.google.com/spreadsheets/d/1MS3prMvRYmXdtddS-RAt2g6zv6X_JJv3Zhgb2fsPA4c
+Redirect /schedules https://docs.google.com/spreadsheets/d/1xcLnq7Ad0ul-8ENr6Q37ie9XTDO64MmIBH6sl_HMc7U
